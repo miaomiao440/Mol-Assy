@@ -116,7 +116,7 @@ pip install -r requirements.txt
 
 ## Dataset
 
-###Dataset Motivation
+### Dataset Motivation
 
 Binary small-molecule co-assembly prediction has long lacked standardized benchmarks. Data sources in this field are highly fragmented and subject to significant literature bias: existing studies tend to focus on structurally simple molecules with higher success rates, while failed cases are rarely systematically reported.
 
@@ -124,7 +124,7 @@ As a result, the dataset itself becomes a critical foundation for computational 
 
 ---
 
-###Dataset Construction
+### Dataset Construction
 
 To improve data coverage from fragmented literature sources, we introduce a literature information extraction pipeline based on a fine-tuned **DeepSeek** model.
 
@@ -136,7 +136,7 @@ The Mol-Assy dataset is constructed through a combination of manual curation and
 
 ---
 
-###Dataset Statistics
+### Dataset Statistics
 
 The key statistics of the dataset are summarized below:
 
