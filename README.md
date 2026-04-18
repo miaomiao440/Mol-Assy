@@ -1,13 +1,13 @@
 # Mol-Assy: A Deep Learning Framework for Conditional-Imbalance-Aware Molecular Pair Prediction
 
-> Mol-Assy is a deep learning framework designed for molecular pair prediction under **conditional imbalance**, enabling robust modeling in scenarios where standardized benchmarks are lacking, data acquisition is difficult, samples are extremely sparse, and reporting bias is significant.  
-> Binary small-molecule co-assembly prediction is presented as a representative application.
+Mol-Assy is a deep learning framework designed for molecular pair prediction under **conditional imbalance**, enabling robust modeling in scenarios where standardized benchmarks are lacking, data acquisition is difficult, samples are extremely sparse, and reporting bias is significant.  
+Binary small-molecule co-assembly prediction is presented as a representative application.
 
 ---
 
 ## Overview
 
-### 1. Task Definition
+###Task Definition
 
 In many molecular pair prediction tasks, the model takes **two molecules** as input and predicts whether they satisfy a specific relationship, interaction, or cooperative behavior. Such problems are widely encountered in molecular interaction modeling, combination drug design, and molecular pairing screening.
 
@@ -17,7 +17,7 @@ In this work, **binary small-molecule co-assembly prediction** is used as a repr
 
 ---
 
-### 2. Computational Challenges
+### Computational Challenges
 
 Compared with conventional molecular classification tasks, binary molecular pair prediction faces more complex real-world constraints:
 
@@ -41,7 +41,7 @@ This phenomenon further exacerbates overfitting toward high-frequency samples, m
 
 ---
 
-### 3. Method Overview
+### Method Overview
 
 Mol-Assy employs a **molecular graph encoding module** to learn structural representations of input molecules, mapping atoms, chemical bonds, and local topological information into embeddings suitable for downstream prediction.
 
@@ -97,6 +97,9 @@ Mol-Assy/
 ├─tb/                           # TensorBoard logs and training visualizations
 │
 └─__pycache__/                  # Python cache files
+```
+---
+
 ## Dependencies and Setup
 
 Please ensure that `conda` is installed on your system.  
@@ -108,9 +111,12 @@ To set up the `Mol-Assy` environment, run the following commands:
 conda create -n mol-assy python=3.10
 conda activate mol-assy
 pip install -r requirements.txt
+```
+---
+
 ## Dataset
 
-### 6.1 Dataset Motivation
+###Dataset Motivation
 
 Binary small-molecule co-assembly prediction has long lacked standardized benchmarks. Data sources in this field are highly fragmented and subject to significant literature bias: existing studies tend to focus on structurally simple molecules with higher success rates, while failed cases are rarely systematically reported.
 
@@ -118,7 +124,7 @@ As a result, the dataset itself becomes a critical foundation for computational 
 
 ---
 
-### 6.2 Dataset Construction
+###Dataset Construction
 
 To improve data coverage from fragmented literature sources, we introduce a literature information extraction pipeline based on a fine-tuned **DeepSeek** model.
 
@@ -130,7 +136,7 @@ The Mol-Assy dataset is constructed through a combination of manual curation and
 
 ---
 
-### 6.3 Dataset Statistics
+###Dataset Statistics
 
 The key statistics of the dataset are summarized below:
 
@@ -146,7 +152,7 @@ The key statistics of the dataset are summarized below:
 
 ---
 
-### 6.4 Evaluation Scenarios
+### Evaluation Scenarios
 
 To systematically evaluate model performance, Mol-Assy defines two benchmark scenarios:
 
@@ -161,15 +167,18 @@ Therefore, the Mol-Assy dataset serves not only as input data but also as an int
 
 ## Training
 
-> **Note:** Before training Mol-Assy, please complete data preprocessing and ensure that the data paths, split file paths, and output directories in the configuration are correctly specified.
+**Note:** Before training Mol-Assy, please complete data preprocessing and ensure that the data paths, split file paths, and output directories in the configuration are correctly specified.
 
 ### Data Preprocessing
 
 ```bash
 python preprocess_new.py
+```
 Training from Scratch
 After preprocessing, run the training script:
+```
 python main_tiaocanloss1.py
+```
 By default, Mol-Assy is trained using the Adam optimizer, with predefined settings for the initial learning rate, weight decay, and batch size. The training process also incorporates dropout, DropEdge, and a learning rate scheduler to improve convergence stability and generalization performance.
 The trained model checkpoints and log files will be saved to the output directory specified in the configuration file.
 
@@ -193,7 +202,7 @@ Both scenarios adopt **5-fold cross-validation** and are evaluated using the fol
 
 ```bash
 python test.py
-
+```
 Reproducing Paper Results
 To reproduce the main results reported in the paper, we recommend running the configurations for:
 Scenario S1 
