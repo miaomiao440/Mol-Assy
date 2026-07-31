@@ -1,4 +1,4 @@
-# Mol-Assy: A Deep Learning Framework for Conditional-Imbalance-Aware Molecular Pair Prediction
+# Data-Driven Discovery of Nanostructured Binary Small-Molecule Co-Assemblies via Condition-Imbalance-Aware Deep Learning
 
 Mol-Assy is a deep learning framework designed for molecular pair prediction under **conditional imbalance**, enabling robust modeling in scenarios where standardized benchmarks are lacking, data acquisition is difficult, samples are extremely sparse, and reporting bias is significant.  
 Binary small-molecule co-assembly prediction is presented as a representative application.
