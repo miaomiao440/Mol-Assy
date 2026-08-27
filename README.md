@@ -1,7 +1,6 @@
-# Data-Driven Discovery of Nanostructured Binary Small-Molecule Co-Assemblies via Condition-Imbalance-Aware Deep Learning
+# LLMs-assisted Data Curation and Neural Network Prediction of Binary Small Molecule Co-Assembly
 
-Mol-Assy is a deep learning framework designed for molecular pair prediction under **conditional imbalance**, enabling robust modeling in scenarios where standardized benchmarks are lacking, data acquisition is difficult, samples are extremely sparse, and reporting bias is significant.  
-Binary small-molecule co-assembly prediction is presented as a representative application.
+Small molecule co‑assembly is a vital materials‑science research direction, yet machine learning‑driven prediction is limited by fragmented experimental data and lack of standardized molecular‑pair datasets. Here we introduce an integrated pipeline using fine‑tuned LLM‑powered literature mining and public high‑throughput data to curate a co‑assembly molecular‑pair dataset of 2,706 entries (587 positive, 2119 negative). Built on this dataset, GNN‑based Mol‑Assembly model achieves F1 > 0.80 for binary co‑assembly prediction. Prospective experiments validated most model‑suggested pairs. This work shows LLM‑assisted curation and GNN modeling can accelerate ML‑guided small‑molecule co‑assembly discovery.
 
 ---
 
